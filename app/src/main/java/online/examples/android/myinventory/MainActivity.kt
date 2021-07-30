@@ -29,9 +29,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun StartingDisplay() {
-    Text(text = "Attention:")
-    Text(text = "This is very important.")
-    Text(text = "And much faster.")
+    Column {
+        Text(text = "Attention:")
+        Text(text = "This is very important.")
+        Text(text = "And much faster.")
+    }
 }
 
 @Preview(showBackground = true)
