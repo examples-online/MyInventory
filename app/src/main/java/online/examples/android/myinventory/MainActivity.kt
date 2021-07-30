@@ -3,6 +3,7 @@ package online.examples.android.myinventory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -17,7 +18,9 @@ class MainActivity : ComponentActivity() {
             MyInventoryTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("World")
+
+                    StartingDisplay()
+
                 }
             }
         }
@@ -25,14 +28,16 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun StartingDisplay() {
+    Text(text = "Attention:")
+    Text(text = "This is very important.")
+    Text(text = "And much faster.")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     MyInventoryTheme {
-        Greeting("World")
+        StartingDisplay()
     }
 }
